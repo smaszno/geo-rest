@@ -1,6 +1,4 @@
-# payu-order
-Klient serwisu PayU do tworzenia zamówienia, korzystający z API PayU.
-Do użycia w charakterze backendu po uprzednim rozwinięciu.
+# geo-rest
+Serwis do rejestracji danych geolokalizacyjnych.
 
-PayU order client, uses PayU API.
-It is somehow unfinished work, which can be used as backend.
+Geolocation data registration service
