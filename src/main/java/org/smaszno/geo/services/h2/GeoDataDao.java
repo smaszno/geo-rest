@@ -1,5 +1,6 @@
-package org.smaszno.geo.model;
+package org.smaszno.geo.services.h2;
 
+import org.smaszno.geo.model.GeoData;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -13,8 +14,8 @@ public class GeoDataDao {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public void create(GeoDataDB geoDataDB)
+    public void create(GeoData geoData)
     {
-        entityManager.persist(geoDataDB);
+        entityManager.persist(geoData);
     }
 }

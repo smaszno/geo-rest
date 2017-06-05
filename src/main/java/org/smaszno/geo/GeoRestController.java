@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.smaszno.geo.model.GeoDataFromJson;
+import org.smaszno.geo.model.GeoData;
 import org.smaszno.geo.services.GeoRestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,9 +34,9 @@ public class GeoRestController {
 
 
     @RequestMapping(value="geo", method = RequestMethod.POST)
-    public ResponseEntity<?> storeData(@RequestBody GeoDataFromJson geoDataFromJson)
+    public ResponseEntity<?> storeData(@RequestBody GeoData geoData)
     {
-        geoRestService.saveData(geoDataFromJson);
+        geoRestService.saveData(geoData);
         return new ResponseEntity<Object>("Stored", HttpStatus.OK);
     }
 
@@ -48,7 +48,7 @@ public class GeoRestController {
             if (example == null) {
 
                 ObjectMapper mapper = new ObjectMapper();
-                String jsonInString = mapper.writeValueAsString(new GeoDataFromJson());
+                String jsonInString = mapper.writeValueAsString(new GeoData());
                 example = "Example of use: \nPOST JSON to /geo: " + jsonInString;
 
             }

@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="geo_data")
 @Data
-public class GeoDataDB {
+public class GeoData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
