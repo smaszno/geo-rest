@@ -49,7 +49,7 @@ public class GeoRestController {
 
                 ObjectMapper mapper = new ObjectMapper();
                 String jsonInString = mapper.writeValueAsString(new GeoData());
-                example = "Example of use: \nPOST JSON to /geo: " + jsonInString;
+                example = "/geo : POST : " + jsonInString;
 
             }
             return new ResponseEntity<Object>(example, HttpStatus.OK);
