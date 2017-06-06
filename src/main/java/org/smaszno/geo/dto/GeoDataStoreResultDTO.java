@@ -1,4 +1,4 @@
-package org.smaszno.geo.model;
+package org.smaszno.geo.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,10 +8,11 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class GeoDataSaveResult {
+public class GeoDataStoreResultDTO {
 
     public enum Status {OK, ERROR};
 
+    Long id;
     Status status;
     String error;
 

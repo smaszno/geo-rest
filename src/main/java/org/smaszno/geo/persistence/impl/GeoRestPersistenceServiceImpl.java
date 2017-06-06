@@ -1,7 +1,8 @@
-package org.smaszno.geo.services.h2;
+package org.smaszno.geo.persistence.impl;
 
 import org.smaszno.geo.model.GeoData;
-import org.smaszno.geo.services.GeoRestDBService;
+import org.smaszno.geo.persistence.GeoDataDao;
+import org.smaszno.geo.persistence.GeoRestPersistenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,7 @@ import javax.transaction.Transactional;
  */
 @Transactional
 @Service
-public class GeoRestH2Service implements GeoRestDBService {
+public class GeoRestPersistenceServiceImpl implements GeoRestPersistenceService {
     @Autowired
     GeoDataDao geoDataDao;
 
