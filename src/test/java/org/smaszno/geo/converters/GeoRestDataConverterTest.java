@@ -8,6 +8,7 @@ import org.smaszno.geo.converters.impl.GeoRestDataConverterImpl;
 import org.smaszno.geo.dto.GeoDataDTO;
 import org.smaszno.geo.model.GeoData;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
@@ -16,7 +17,7 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
  * Created by smaszno on 2017-06-06.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(loader = AnnotationConfigContextLoader.class, classes = {GeoRestDataConverterImpl.class})
+@Import(GeoRestDataConverterImpl.class)
 public class GeoRestDataConverterTest {
 
     GeoDataDTO geoDataDTOMock;
@@ -29,9 +30,9 @@ public class GeoRestDataConverterTest {
     public void testConvertFrom() throws Exception {
 
         GeoData geoData = geoRestDataConverter.convertFrom(geoDataDTOMock);
-        Assert.assertEquals("GeoRestDataConverterTest: Longitude differs", geoData.getLongitude(), geoDataDTOMock.getLongitude());
-        Assert.assertEquals("GeoRestDataConverterTest: Latitude differs", geoData.getLatitude(), geoDataDTOMock.getLatitude());
-        Assert.assertEquals("GeoRestDataConverterTest: Elevation differs", geoData.getElevation(), geoDataDTOMock.getElevation());
+        Assert.assertEquals("GeoRestDataConverterTest: Longitude differs", geoDataDTOMock.getLongitude(), geoData.getLongitude());
+        Assert.assertEquals("GeoRestDataConverterTest: Latitude differs", geoDataDTOMock.getLatitude(), geoData.getLatitude());
+        Assert.assertEquals("GeoRestDataConverterTest: Elevation differs", geoDataDTOMock.getElevation(), geoData.getElevation());
 
     }
 
