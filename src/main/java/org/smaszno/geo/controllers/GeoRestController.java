@@ -8,7 +8,6 @@ import org.smaszno.geo.dto.GeoDataDTO;
 import org.smaszno.geo.dto.GeoDataStoreResultDTO;
 import org.smaszno.geo.model.GeoData;
 import org.smaszno.geo.services.GeoRestService;
-import org.smaszno.geo.services.impl.GeoRestServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

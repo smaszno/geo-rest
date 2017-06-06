@@ -9,9 +9,7 @@ import org.smaszno.geo.dto.GeoDataDTO;
 import org.smaszno.geo.model.GeoData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Import;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
 /**
  * Created by smaszno on 2017-06-06.
